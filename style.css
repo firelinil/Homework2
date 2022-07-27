@@ -1,0 +1,231 @@
+.publ{
+    display: block;
+    width: 400px;
+    height: 200px;
+    border: 1px solid green;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+@keyframes anim1 {
+    from{margin-left: 5px;}
+    to{margin-left: 500px;}
+}
+#z1{
+    border: 1px solid red;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+
+    animation: anim1 5s 3;
+}
+@keyframes anim2 {
+    from{margin-left: 5px;}
+    to{margin-left: 500px;}
+}
+#z2{
+    border: 1px solid red;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+
+    animation: anim2 5s infinite;
+}
+@keyframes anim3 {
+    from{background: #fff;}
+    to{background: red;}
+}
+#z3{
+    border: 1px solid red;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+
+    animation: anim3 3s infinite;
+}
+@keyframes anim4 {
+    0%{margin-left: 0; margin-top: 0;}
+    25%{margin-left: 100px; margin-top: 0;}
+    50%{margin-left: 100px; margin-top: 100px;}
+    75%{margin-left: 0; margin-top: 100px;}
+    100%{margin-left: 0; margin-top: 0;}
+}
+#z4{
+    border: 1px solid red;
+    width: 50px;
+    height: 50px;
+    
+    animation: anim4 8s linear infinite;
+}
+@keyframes anim55 {
+    0%{margin-left: 0; margin-top: 0;}
+    25%{margin-left: 200px; margin-top: 0;}
+    50%{margin-left: 200px; margin-top: 100px;}
+    75%{margin-left: 0; margin-top: 100px;}
+    100%{margin-left: 0; margin-top: 0;}
+}
+@keyframes anim555 {
+    0%{background: #fff;}
+    25%{background-color: red;}
+	50%{background: #fff;}
+	100%{background: red;}
+}
+#z5{
+    border: 1px solid red;
+    width: 50px;
+    height: 50px;
+    
+    animation: anim55 8s linear infinite, anim555 4s linear infinite;
+}
+
+@keyframes anim6 {
+    0%{margin-left: 0;}
+    50%{margin-left: 200px;}
+    100%{margin-left: 0;}
+}
+#z6{
+    border: 1px solid red;
+    width: 50px;
+    height: 50px;
+    
+    animation: anim6 8s linear infinite;
+}
+@keyframes anim7 {
+   from{margin-left: 5px;}
+   to{margin-left: 150px;}
+}
+#z7{
+    border: 1px solid red;
+    width: 50px;
+    height: 50px;
+    
+    animation: anim7 4s infinite alternate;
+}
+@keyframes anim8 {
+    0%{width: 0;}
+    100%{width: 250px;}
+}
+.z8-1{
+    border: 1px solid red;
+    width: 250px;
+    height: 30px;
+}
+#z8{
+    background: red;
+    width: 0;
+    height: 30px;
+
+    animation: anim8 5s linear 1 forwards;
+}
+@keyframes anim9 {
+    0%{width: 0;}
+    100%{width: 250px;}
+}
+.z9-1{
+    border: 1px solid red;
+    width: 250px;
+    height: 30px;
+}
+#z9{
+    background: red;
+    width: 0;
+    height: 30px;
+
+    animation: anim9 10s linear infinite;
+}
+@keyframes anim10 {
+    0%{width: 50px;}
+    100%{width: 100vw;}
+}
+#z10{
+    border: 1px solid red;
+    height: 30px; 
+    margin-bottom: 20px;
+
+    animation: anim10 3s ease infinite alternate;
+	animation-play-state: paused;
+}
+#z10:hover{
+    animation-play-state: running; 
+}
+@keyframes anim11 {
+    0%{width: 200px;}
+    100%{width: 100vw;}
+}
+#z11{
+    border: 1px solid red;
+    width: 100px;
+    height: 30px; 
+    text-align: center;
+    line-height: 2;
+    padding: 10px;
+    margin-bottom: 10px;
+
+    animation: anim11 3s ease infinite alternate;
+	animation-play-state: paused;
+}
+#z11-1{
+    height: 70px;
+    border: 1px solid blue;
+
+    animation: anim11 2s ease alternate infinite;
+	animation-play-state: paused;
+}
+#z11:hover +#z11-1{
+    animation-play-state: running; 
+}
+@keyframes anim12 {
+    0%{
+		bottom: 200px;
+		left: 0;
+		animation-timing-function: ease-in;
+	}
+    40%{
+        animation-timing-function: ease-out;
+		bottom: 0;
+    }
+	55%{
+		bottom: 50px;
+		animation-timing-function: ease-in;
+	}
+    70%{
+        animation-timing-function: ease-out;
+		bottom: 0;
+    }
+	80%{
+		bottom: 25px;
+		animation-timing-function: ease-in;
+	}
+    90%{
+        animation-timing-function: ease-out;
+		bottom: 0;
+    }
+	95%{
+		bottom: 10px;
+		animation-timing-function: ease-in;
+	}
+	100%{
+		left: 110px;
+		bottom: 0;
+		animation-timing-function: ease-out;
+	}
+}
+.z12-1{
+    margin: 0px;
+}
+.z12{
+    width: 220px;
+	height: 250px;
+	border: 1px solid red;
+	position: relative;
+}
+#ball{
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background: red;
+    position: absolute;
+
+    animation: anim12 5s infinite;
+}
+
+    /*Последний очень сложный, сама не смогла сделать без подглядывания:(*/
